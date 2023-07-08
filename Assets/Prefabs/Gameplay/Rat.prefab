@@ -94,8 +94,10 @@ GameObject:
   - component: {fileID: 5889450345730352992}
   - component: {fileID: 2865831292445953560}
   - component: {fileID: 7216886759939620856}
+  - component: {fileID: 8398648164931831428}
   - component: {fileID: 8246614489707420727}
   - component: {fileID: 5579958190358368412}
+  - component: {fileID: 6436706949110193603}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -148,6 +150,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &8398648164931831428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889450345730352993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b243b542e27750f4f85b3b46a228532e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementController: {fileID: 8246614489707420727}
+  rotationController: {fileID: 5579958190358368412}
 --- !u!114 &8246614489707420727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +192,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotatorTransform: {fileID: 5889450346134525981}
   rotateSpeed: 5
+--- !u!114 &6436706949110193603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889450345730352993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26285e04a3fb02447b8c977ca93fac39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5889450346134525982
 GameObject:
   m_ObjectHideFlags: 0

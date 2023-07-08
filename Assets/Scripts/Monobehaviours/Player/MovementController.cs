@@ -1,12 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Movement : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     [SerializeField] private Rigidbody moverRigidbody = null;
     [SerializeField] private float forceStrength = 1f;
 
-    private void FixedUpdate()
+    public void Move()
     {
         if (InputController.Instance.Direction == Vector3.zero)
             return;

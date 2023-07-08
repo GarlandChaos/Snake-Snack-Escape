@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Rotation : MonoBehaviour
+public class RotationController : MonoBehaviour
 {
     [SerializeField] private Transform rotatorTransform = null;
     [SerializeField] private float rotateSpeed = 1f;
 
-    private void FixedUpdate()
+    public void Rotate()
     {
         if (InputController.Instance.Direction == Vector3.zero)
             return;

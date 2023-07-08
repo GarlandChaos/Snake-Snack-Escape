@@ -1,0 +1,1 @@
+public class KeyControllerPool : AGameObjectPool<KeyController> { }
