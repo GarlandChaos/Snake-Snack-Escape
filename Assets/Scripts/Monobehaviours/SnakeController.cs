@@ -20,6 +20,8 @@ public class SnakeController : MonoBehaviour
 
     private List<Vector2Int> _snakePos = new();
 
+    private TargetSetter _targetSetter;
+
     [System.Serializable]
     private class BodySection
     {
@@ -35,6 +37,8 @@ public class SnakeController : MonoBehaviour
 
     private void Awake()
     {
+        _targetSetter = head.GetComponent<TargetSetter>();
+
         _bodyParts = new List<BodySection>
         {
             new(head.transform, GetGridPos(head.transform)),
@@ -45,7 +49,7 @@ public class SnakeController : MonoBehaviour
 
         for (var i = 0; i < snakeSize; i++)
         {
-            AddPart();
+            AddBodyPart();
         }
     }
 
@@ -66,6 +70,11 @@ public class SnakeController : MonoBehaviour
                 StartCoroutine(MoveBody(_bodyParts[i], _snakePos[i]));
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AddBodyPart();
+        }
     }
 
     private void UpdateSnakePositions()
@@ -75,6 +84,8 @@ public class SnakeController : MonoBehaviour
         {
             _snakePos.RemoveAt(_snakePos.Count-1);
         }
+
+        _targetSetter.blockedCells = _snakePos;
     }
 
     private IEnumerator MoveBody(BodySection body, Vector2Int target)
@@ -93,8 +104,9 @@ public class SnakeController : MonoBehaviour
         body.position = GetGridPos(body.transform);
     }
 
-    public void AddPart()
+    public void AddBodyPart()
     {
+        snakeSize++;
         var newBody = Instantiate(body, transform).transform;
         newBody.localPosition = head.transform.localPosition;
         _bodyParts.Insert(1, new BodySection(newBody, _bodyParts[0].position));

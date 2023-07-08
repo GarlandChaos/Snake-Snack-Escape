@@ -21,6 +21,7 @@ public class PathfindingManager : MonoBehaviour
         collisionMap = new bool[mapSize.x, mapSize.y];
         UpdateCollisionMap();
     }
+
     public string[] collisionLayers;
     private RaycastHit2D hit;
     private LayerMask mask;
@@ -40,16 +41,15 @@ public class PathfindingManager : MonoBehaviour
         }
     }
 
-    public List<Vector2Int> GetPath(Vector3 origin, Vector3 target) => GetPath(new Vector2(origin.x, origin.z), new Vector2(target.x, target.z));
-    public List<Vector2Int> GetPath(Vector2 origin, Vector2 target)
+    public List<Vector2Int> GetPath(Vector3 origin, Vector3 target, List<Vector2Int> blockedCells) => GetPath(new Vector2(origin.x, origin.z), new Vector2(target.x, target.z), blockedCells);
+    public List<Vector2Int> GetPath(Vector2 origin, Vector2 target, List<Vector2Int> blockedCells)
     {
         var initCell = ConvertPosToInt(origin);
         var targetCell = ConvertPosToInt(target);
 
-        return GetPath(initCell, targetCell);
+        return GetPath(initCell, targetCell, blockedCells);
     }
 
-    public Vector2Int ConvertPosToInt(Vector3 pos) => ConvertPosToInt(new Vector2(pos.x, pos.z));
     public Vector2Int ConvertPosToInt(Vector2 pos)
     {
         var halfCell = cellSize / 2f;
@@ -77,7 +77,7 @@ public class PathfindingManager : MonoBehaviour
                 {
                     var newCell = new Vector2Int(x + currentCell.x, y + currentCell.y);
                     if (x == 0 && y == 0 || x != 0 && y != 0) continue;
-                    if (cellsToCheck.Contains(newCell) || checkedCells.ContainsKey(newCell)) continue;
+                    if (cellsToCheck.Contains(newCell) || checkedCells.ContainsKey(newCell) || blockedPositions.Contains(newCell)) continue;
 
                     if (BlockedCell(newCell) && newCell != origin && newCell != target)
                     {

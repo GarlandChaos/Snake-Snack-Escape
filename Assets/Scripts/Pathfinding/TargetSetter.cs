@@ -8,6 +8,8 @@ public class TargetSetter : MonoBehaviour
     [SerializeField] private Transform target;
     Vector3 lastPos;
 
+    public List<Vector2Int> blockedCells = new List<Vector2Int>();
+
     private void Awake()
     {
         _agent = GetComponent<PathfindingAgent>();
@@ -18,7 +20,7 @@ public class TargetSetter : MonoBehaviour
         if(lastPos != target.position)
         {
             lastPos = target.position;
-            _agent.SetPath(target.position);
+            _agent.SetPath(target.position, blockedCells);
         }
     }
 }

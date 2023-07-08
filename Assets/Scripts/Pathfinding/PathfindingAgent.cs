@@ -14,7 +14,7 @@ public class PathfindingAgent : MonoBehaviour
     public float moveSpeed;
     public bool Moving => path.Count > 0;
 
-    private IEnumerator Move(Vector2 target)
+    private IEnumerator Move(Vector2 target, List<Vector2Int> blockedCells)
     {
         while (path.Count > 0)
         {
@@ -24,7 +24,7 @@ public class PathfindingAgent : MonoBehaviour
             {
                 if (PathfindingManager.Instance.BlockedCell(path[0]))
                 {
-                    SetPath(target);
+                    SetPath(target, blockedCells);
                     yield break;
                 }
 
@@ -37,12 +37,12 @@ public class PathfindingAgent : MonoBehaviour
         }
     }
 
-    public void SetPath(Vector3 target)
+    public void SetPath(Vector3 target, List<Vector2Int> blockedCells)
     {
         Stop();
-        path = PathfindingManager.Instance.GetPath(target, transform.position);
+        path = PathfindingManager.Instance.GetPath(target, transform.position, blockedCells);
 
-        StartCoroutine(Move(target));
+        StartCoroutine(Move(target, blockedCells));
     }
 
     public void Stop()
