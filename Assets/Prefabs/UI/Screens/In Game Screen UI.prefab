@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2674096441347505444}
   m_Layer: 0
-  m_Name: In Game UI
+  m_Name: In Game Screen UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
