@@ -47,7 +47,8 @@ public class SnakeController : MonoBehaviour
 
         UpdateSnakePositions();
 
-        for (var i = 0; i < snakeSize; i++)
+        var size = snakeSize;
+        for (var i = 0; i < size; i++)
         {
             AddBodyPart();
         }
