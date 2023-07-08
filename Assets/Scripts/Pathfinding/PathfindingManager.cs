@@ -6,6 +6,8 @@ using UnityEditor;
 public class PathfindingManager : MonoBehaviour
 {
     public static PathfindingManager Instance;
+    [SerializeField]
+    private bool debugVisualization;
 
     public bool[,] collisionMap;
     public Vector2Int mapSize;
@@ -59,7 +61,7 @@ public class PathfindingManager : MonoBehaviour
     {
         return new Vector3((pos.x) * cellSize, 0, (pos.y) * cellSize) + offSet;
     }
-    public List<Vector2Int> GetPath(Vector2Int origin, Vector2Int target)
+    public List<Vector2Int> GetPath(Vector2Int origin, Vector2Int target, List<Vector2Int> blockedPositions)
     {
         var cellsToCheck = new List<Vector2Int>() { target };
         var checkedCells = new Dictionary<Vector2Int, int>() { { target, 1 } };
@@ -120,6 +122,7 @@ public class PathfindingManager : MonoBehaviour
                 }
             }
         }
+
         value.Add(target);
         value.Reverse();
 
@@ -135,6 +138,8 @@ public class PathfindingManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!debugVisualization) return;
+
         Gizmos.color = Color.blue;
 
         for (var x = 0; x < mapSize.x; x++)
