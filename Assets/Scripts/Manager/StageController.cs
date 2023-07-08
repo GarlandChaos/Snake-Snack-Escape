@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class StageController : MonoBehaviour
     public StageData[] stagesData;
     public int currentStageIndex { get; private set; } = 0;
     public int keysCount { get; private set; } = 0;
+    public Action allKeysCollected = null;
 
     #region Singleton
     public static StageController Instance { get; private set; }
@@ -39,6 +41,7 @@ public class StageController : MonoBehaviour
         else
         {
             InGameUI.Instance.SetDoorOpenText();
+            allKeysCollected?.Invoke();
         }
     }
 

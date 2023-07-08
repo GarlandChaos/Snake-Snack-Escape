@@ -6,9 +6,9 @@ public class ColliderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ICollectable collectable = other.GetComponent<ICollectable>();
-        if (collectable != null)
-            collectable.Collect();
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        if (interactable != null)
+            interactable.Interact();
     }
 
     private void OnCollisionEnter(Collision collision)

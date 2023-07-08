@@ -28,6 +28,9 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameState.gameRunning || !GameState.playerActive)
+            return;
+
         horizontalInput = Input.GetAxis(horizontalAxis);
         verticalInput = Input.GetAxis(verticalAxis);
         direction = new Vector3(horizontalInput, 0f, verticalInput);

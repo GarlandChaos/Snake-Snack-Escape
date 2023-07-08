@@ -1,6 +1,6 @@
-public interface ICollectable
+public interface IInteractable
 {
-    void Collect();
+    void Interact();
 }
 
 public interface IDamager { }

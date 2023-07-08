@@ -24,8 +24,6 @@ public class KeyManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
-
-        SpawnKey(transform.position);
     }
 
     public void SpawnKey(Vector3 position)
