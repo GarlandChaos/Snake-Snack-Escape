@@ -16,7 +16,6 @@ public class StageController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -33,7 +32,14 @@ public class StageController : MonoBehaviour
     private void CollectKey()
     {
         keysCount++;
-        InGameUI.Instance.SetKeyCount(new MinMax{ min = keysCount, max = stagesData[currentStageIndex].keysRequired });
+        if(keysCount < stagesData[currentStageIndex].keysRequired)
+        {
+            InGameUI.Instance.SetKeyCount(new MinMax { min = keysCount, max = stagesData[currentStageIndex].keysRequired });
+        }
+        else
+        {
+            InGameUI.Instance.SetDoorOpenText();
+        }
     }
 
     public void NextStage()

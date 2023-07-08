@@ -17,7 +17,6 @@ public class InGameUI : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -34,11 +33,16 @@ public class InGameUI : MonoBehaviour
 
     private void InitilizeKeyCount()
     {
-        keyCountText.SetText($"{stageControllerInstance.keysCount}/{stageControllerInstance.stagesData[stageControllerInstance.currentStageIndex].keysRequired}");
+        keyCountText.SetText($"{stageControllerInstance.keysCount} / {stageControllerInstance.stagesData[stageControllerInstance.currentStageIndex].keysRequired}");
     }
 
     public void SetKeyCount(MinMax keyCount)
     {
-        keyCountText.SetText($"{keyCount.min}/{keyCount.max}");
+        keyCountText.SetText($"{keyCount.min} / {keyCount.max}");
+    }
+
+    public void SetDoorOpenText()
+    {
+        keyCountText.SetText("Door Opened");
     }
 }
