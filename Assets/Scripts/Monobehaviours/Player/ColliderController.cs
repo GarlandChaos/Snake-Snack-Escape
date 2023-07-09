@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ColliderController : MonoBehaviour
 {
+    public bool canInteract = true;
     private IDamageable damageable = null;
 
     private void Awake()
@@ -11,6 +12,8 @@ public class ColliderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!canInteract) return;
+
         IInteractable interactable = other.GetComponent<IInteractable>();
         if (interactable != null)
             interactable.Interact();

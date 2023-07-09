@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 0
   keysRequired: 3
-  levelSize: {x: 30, y: 20}
+  levelSize: {x: 10, y: 10}
   snakePosition: {x: 0, y: 0}
   snakeSize: 4
   snakeSpeed: 1

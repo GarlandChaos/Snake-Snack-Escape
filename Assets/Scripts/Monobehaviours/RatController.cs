@@ -26,7 +26,7 @@ public class RatController : MonoBehaviour, IDamageable
         else
         {
             _timer = Random.Range(2f, 5f);
-            var randomPos = new Vector2Int(Random.Range(0, mapSize.x), Random.Range(0, mapSize.x));
+            var randomPos = (new Vector2Int(Random.Range(-PathfindingManager.Instance.mapSize.x + 1, 1), Random.Range(-PathfindingManager.Instance.mapSize.y + 1, 1)));
             _pathfindingAgent.SetPath(PathfindingManager.Instance.ConvertPosToFloat(randomPos), new List<Vector2Int>());
         }
     }

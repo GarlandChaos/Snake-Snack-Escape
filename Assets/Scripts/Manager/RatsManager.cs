@@ -48,7 +48,7 @@ public class RatsManager : MonoBehaviour
     {
         if (_rats.Count <= StageController.Instance.KeysLeft) return true;
 
-        return Random.Range(0, 100) > 50;
+        return Random.Range(0, 100) > 90;
     }
 
     public void SpawnRats(int amount)
@@ -71,7 +71,7 @@ public class RatsManager : MonoBehaviour
         var newRat = Instantiate(rat, transform);
         _rats.Add(newRat);
 
-        newRat.transform.position = pathfiding.ConvertPosToFloat(new Vector2Int(Random.Range(0, pathfiding.mapSize.x), Random.Range(0, pathfiding.mapSize.x)));
+        newRat.transform.position = pathfiding.ConvertPosToFloat(new Vector2Int(Random.Range(-pathfiding.mapSize.x + 1, 1), Random.Range(-pathfiding.mapSize.y + 1, 1)));
     }
 
     public void RemoveRat(RatController rat) => _rats.Remove(rat);
