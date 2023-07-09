@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class SnakeController : MonoBehaviour
 {
+    #region Singleton
+    public static SnakeController Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    #endregion
+
     [SerializeField]
     private GameObject head;
     [SerializeField]

@@ -38,6 +38,16 @@ public class KeyManager : MonoBehaviour
         keys.Add(keyController);
     }
 
+    public void DestroyAllKeys()
+    {
+        for(var i = 0; i < keys.Count; i++)
+        {
+            Destroy(keys[i].gameObject);
+        }
+
+        keys = new List<GameObject>();
+    }
+
     public void DestroyKey(GameObject key)
     {
         //if (keyControllerStack.Count == 0)

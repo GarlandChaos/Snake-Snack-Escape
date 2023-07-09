@@ -42,6 +42,8 @@ public class RatController : MonoBehaviour, IDamageable
             KeyManager.Instance.SpawnKey(transform.position);
         }
 
+        SnakeController.Instance.AddBodyPart();
+
         Destroy(gameObject);
     }
 }

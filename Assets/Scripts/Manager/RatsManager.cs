@@ -50,7 +50,7 @@ public class RatsManager : MonoBehaviour
 
         if (_rats.Count <= StageController.Instance.KeysLeft) return true;
 
-        return Random.Range(0, 100) > 50;
+        return Random.Range(0, 100) > 25;
     }
 
     public void SpawnRats(int amount)

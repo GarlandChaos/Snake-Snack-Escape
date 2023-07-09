@@ -80,6 +80,8 @@ public class LevelController : MonoBehaviour
         wallDetailMat.color = stage.wallDetailColor;
         wallDetailTopMat.color = stage.wallDetailTopColor;
 
+        KeyManager.Instance.DestroyAllKeys();
+
         RatsManager.Instance.SpawnRats(stage.rats);
     }
 }

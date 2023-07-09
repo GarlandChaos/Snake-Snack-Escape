@@ -12,6 +12,7 @@ public class ColliderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!GameState.gameRunning) return;
         if (!canInteract) return;
 
         IInteractable interactable = other.GetComponent<IInteractable>();
@@ -21,6 +22,7 @@ public class ColliderController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!GameState.gameRunning) return;
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
         if (damager != null)
             damageable.TakeDamage();
