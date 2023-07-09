@@ -951,6 +951,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: ---- UI ----
       objectReference: {fileID: 0}
+    - target: {fileID: 1853883050616501874, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853883050616501874, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853883050616501874, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853883050616501874, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853883050632591463, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853883050647392680, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
 --- !u!114 &1759931411 stripped
