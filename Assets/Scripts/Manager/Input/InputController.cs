@@ -7,7 +7,7 @@ public class InputController : MonoBehaviour
     private static InputController instance = null;
 
     //Object Data
-    private Vector3 direction = Vector3.zero;
+    public Vector3 direction = Vector3.zero;
     private const string horizontalAxis = "Horizontal";
     private const string verticalAxis = "Vertical";
     private float horizontalInput = 0f;
@@ -64,5 +64,10 @@ public class InputController : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+    }
+
+    public void StopMoving()
+    {
+        direction = Vector3.zero;
     }
 }

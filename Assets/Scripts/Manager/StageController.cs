@@ -102,6 +102,7 @@ public class StageController : MonoBehaviour
     private void DisableGameStates()
     {
         InputController.Instance.ResetVelocity();
+        InputController.Instance.StopMoving();
         AudioManager.Instance.StopWalkingSFX();
         GameState.gameRunning = false;
         GameState.snakeActive = false;
