@@ -3,6 +3,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private GameObject triggerGameObject = null;
+    [SerializeField] private Animator doorAnimator;
 
     private void OnEnable()
     {
@@ -18,6 +19,7 @@ public class DoorController : MonoBehaviour
     {
         //Animate the doors opening
         //Enable trigger 
+        doorAnimator.SetTrigger("Open");
         triggerGameObject.SetActive(true);
     }
 }
