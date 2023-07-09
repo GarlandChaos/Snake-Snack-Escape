@@ -39,12 +39,15 @@ public class PathfindingAgent : MonoBehaviour
                     yield break;
                 }
 
-                if (t < 1f)
+                if (GameState.gameRunning)
                 {
-                    t += (moveSpeed * 2) * Time.deltaTime;
-                    rotateTransform.eulerAngles = new Vector3(0, Mathf.LerpAngle(initialEuler, aim.eulerAngles.y, t), 0);
+                    if (t < 1f)
+                    {
+                        t += (moveSpeed * 2) * Time.deltaTime;
+                        rotateTransform.eulerAngles = new Vector3(0, Mathf.LerpAngle(initialEuler, aim.eulerAngles.y, t), 0);
+                    }
+                    transform.position = Vector3.MoveTowards(transform.position, currentTarget, moveSpeed * Time.deltaTime);
                 }
-                transform.position = Vector3.MoveTowards(transform.position, currentTarget, moveSpeed * Time.deltaTime);
 
                 yield return null;
             }

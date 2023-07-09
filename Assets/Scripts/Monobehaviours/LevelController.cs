@@ -43,7 +43,7 @@ public class LevelController : MonoBehaviour
 
     [ContextMenu("TestSize")]
     public void SetLevelSize() => SetLevelSize(size);
-    public void SetLevelSize(Vector2Int size)
+    private void SetLevelSize(Vector2Int size)
     {
         levelGround.localScale = new Vector3(size.x/10f, 1f, size.y/10f);
         levelMat.mainTextureScale = new Vector2(size.x/2f, size.y/2f);
@@ -60,6 +60,7 @@ public class LevelController : MonoBehaviour
 
         door.position = new Vector3(0, 0, size.y / 2f);
         door.gameObject.SetActive(true);
+        door.GetChild(0).gameObject.SetActive(false);
 
         pathfindingManager.mapSize = size;
         pathfindingManager.offSet = new Vector3(-size.x / 2f + 0.5f, 0, -size.y / 2f + 0.5f);
@@ -78,5 +79,7 @@ public class LevelController : MonoBehaviour
         wallMat.color = stage.wallColor;
         wallDetailMat.color = stage.wallDetailColor;
         wallDetailTopMat.color = stage.wallDetailTopColor;
+
+        RatsManager.Instance.SpawnRats(stage.rats);
     }
 }
