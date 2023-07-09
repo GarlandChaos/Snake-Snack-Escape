@@ -55,17 +55,20 @@ public class StageController : MonoBehaviour
             currentStageIndex++;
             SetStage();
         }
+    }
+
+    public void SetVictory()
+    {
+        if (currentStageIndex < stagesData.Length - 1)
+        {
+            DisableGameStates();
+            UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.victoryCanvas);
+        }
         else
         {
             DisableGameStates();
             UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.endGameCanvas);
         }
-    }
-
-    public void SetVictory()
-    {
-        DisableGameStates();
-        UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.victoryCanvas);
     }
 
     public void SetGameOver()
