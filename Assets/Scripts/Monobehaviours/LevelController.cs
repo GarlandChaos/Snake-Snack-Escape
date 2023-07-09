@@ -62,6 +62,8 @@ public class LevelController : MonoBehaviour
         door.gameObject.SetActive(true);
         door.GetChild(0).gameObject.SetActive(false);
 
+        door.GetComponent<DoorController>().CloseDoor();
+
         pathfindingManager.mapSize = size;
         pathfindingManager.offSet = new Vector3(-size.x / 2f + 0.5f, 0, -size.y / 2f + 0.5f);
         pathfindingManager.UpdateCollisionMap();

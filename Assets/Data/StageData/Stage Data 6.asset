@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5add8f05c7c0e2e4ca0d4897caa1d464, type: 3}
+  m_Name: Stage Data 6
+  m_EditorClassIdentifier: 
+  stageId: 0
+  keysRequired: 3
+  levelSize: {x: 10, y: 10}
+  snakePosition: {x: 0, y: 0}
+  snakeSize: 4
+  snakeSpeed: 3
+  rats: 5
+  groundColor: {r: 0.49043253, g: 0.9716981, b: 0.56027734, a: 0}
+  backgroundColor: {r: 0.4481132, g: 0.90736526, b: 1, a: 0}
+  wallColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
+  wallDetailColor: {r: 1, g: 0.7620259, b: 0.5235849, a: 0}
+  wallDetailTopColor: {r: 0.5943396, g: 0.3262709, b: 0.103729084, a: 0}

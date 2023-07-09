@@ -22,4 +22,9 @@ public class DoorController : MonoBehaviour
         doorAnimator.SetTrigger("Open");
         triggerGameObject.SetActive(true);
     }
+
+    public void CloseDoor()
+    {
+        doorAnimator.SetTrigger("Close");
+    }
 }
