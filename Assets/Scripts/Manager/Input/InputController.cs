@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
@@ -55,8 +56,13 @@ public class InputController : MonoBehaviour
         else
         {
             audioManagerInstance.walkingAudioSource.Stop();
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            ResetVelocity();
         }
+    }
+
+    public void ResetVelocity()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 }
