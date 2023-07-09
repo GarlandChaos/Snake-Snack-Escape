@@ -6,6 +6,6 @@ public class EndLevelTrigger : MonoBehaviour, IInteractable
 {
     public void Interact()
     {
-        //invoke game won event
+        StageController.Instance.SetVictory();
     }
 }

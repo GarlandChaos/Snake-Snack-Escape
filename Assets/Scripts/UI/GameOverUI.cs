@@ -33,7 +33,7 @@ public class GameOverUI : MonoBehaviour
     private void TryAgain()
     {
         UIScreenManager.Instance.HideScreen(gameOverCanvas);
-        //Restart Game
+        StageController.Instance.SetStage();
     }
 
     private void GiveUp()
