@@ -22,7 +22,7 @@ public class RatsManager : MonoBehaviour
 
     public PathfindingManager pathfiding;
     public RatController rat;
-    private List<RatController> _rats;
+    private List<RatController> _rats = new List<RatController>();
     [SerializeField] private Transform player;
 
     public Transform GetClosestRat(Transform snakeHead)
