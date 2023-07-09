@@ -19,8 +19,8 @@ MonoBehaviour:
   snakeSize: 4
   snakeSpeed: 2
   rats: 5
-  groundColor: {r: 0.5137255, g: 0.909804, b: 1, a: 0}
-  backgroundColor: {r: 0.53425646, g: 0.7075472, b: 0.37046102, a: 0}
+  groundColor: {r: 0.83214265, g: 1, b: 0.5137255, a: 0}
+  backgroundColor: {r: 0.16794232, g: 0.5428107, b: 0.6981132, a: 0}
   wallColor: {r: 0.8490566, g: 0.77416337, b: 0.54067284, a: 0}
   wallDetailColor: {r: 0.7843138, g: 0.8235295, b: 1, a: 0}
   wallDetailTopColor: {r: 0.7843138, g: 0.8235295, b: 1, a: 0}
