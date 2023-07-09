@@ -575,6 +575,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelGround: {fileID: 6870914817451197796}
   levelMat: {fileID: 2100000, guid: 0b422a0d8f8b194489c72f9a8e571190, type: 2}
+  wallMat: {fileID: 2100000, guid: 427cf4b5bcbd18245ac424ac5bdc56c3, type: 2}
+  wallDetailMat: {fileID: 2100000, guid: 63859f0e4c40de24993f43dc0228454a, type: 2}
+  wallDetailTopMat: {fileID: 2100000, guid: 62fc3297f78ecee4a95f2132122f463d, type: 2}
   wallLeft: {fileID: 6870914817110356823}
   wallRight: {fileID: 6870914816631412572}
   wallTop: {fileID: 6870914817088211431}
@@ -583,6 +586,7 @@ MonoBehaviour:
   player: {fileID: 0}
   pathfindingManager: {fileID: 0}
   snakeController: {fileID: 0}
+  cam: {fileID: 0}
   size: {x: 20, y: 10}
 --- !u!1 &6870914816631412563
 GameObject:
