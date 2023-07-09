@@ -37,6 +37,7 @@ public class StageController : MonoBehaviour
         if(keysCount < stagesData[currentStageIndex].keysRequired)
         {
             InGameUI.Instance.SetKeyCount(new MinMax { min = keysCount, max = stagesData[currentStageIndex].keysRequired });
+            AudioManager.Instance.PlayKeySFX();
         }
         else
         {

@@ -12,5 +12,6 @@ public class MovementController : MonoBehaviour
             return;
 
         moverRigidbody.transform.Translate(InputController.Instance.Direction * forceStrength * Time.fixedDeltaTime, Space.World);
+    
     }
 }

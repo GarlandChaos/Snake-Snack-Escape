@@ -16,6 +16,8 @@ public class InputController : MonoBehaviour
     public static InputController Instance => instance;
     public Vector3 Direction => direction;
 
+    private AudioManager audioManagerInstance;
+
     private void Awake()
     {
         if(instance != null)
@@ -23,6 +25,11 @@ public class InputController : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        audioManagerInstance = AudioManager.Instance;
     }
 
     // Update is called once per frame
@@ -35,5 +42,17 @@ public class InputController : MonoBehaviour
         verticalInput = Input.GetAxis(verticalAxis);
         direction = new Vector3(horizontalInput, 0f, verticalInput);
         direction = (direction.magnitude > 1f) ? direction.normalized : direction;
+
+        if (direction.magnitude > 0.5f)
+        {
+            if (audioManagerInstance.walkingAudioSource.isPlaying)
+                return;
+
+            audioManagerInstance.PlayWalkingSFX();
+        }
+        else
+        {
+            audioManagerInstance.walkingAudioSource.Stop();
+        }
     }
 }

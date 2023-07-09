@@ -43,6 +43,6 @@ public class InGameUI : MonoBehaviour
 
     public void SetDoorOpenText()
     {
-        keyCountText.SetText("Door Opened");
+        keyCountText.SetText("Escape");
     }
 }
