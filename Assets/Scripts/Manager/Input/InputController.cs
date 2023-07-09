@@ -12,6 +12,8 @@ public class InputController : MonoBehaviour
     private float horizontalInput = 0f;
     private float verticalInput = 0f;
 
+    [SerializeField] private Rigidbody rb;
+
     //Properties
     public static InputController Instance => instance;
     public Vector3 Direction => direction;
@@ -53,6 +55,8 @@ public class InputController : MonoBehaviour
         else
         {
             audioManagerInstance.walkingAudioSource.Stop();
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
     }
 }

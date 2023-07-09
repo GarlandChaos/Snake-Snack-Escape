@@ -172,6 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f2eb21a037fb540ae09324cc46766d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathfiding: {fileID: 0}
+  rat: {fileID: 2158844836039703905, guid: 097c6e2ed116b584d88c22773902b030, type: 3}
+  player: {fileID: 0}
 --- !u!4 &1261250166627093824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6245742760531506591, guid: fbe13bcf12a9a3941adb43718820afcf, type: 3}
