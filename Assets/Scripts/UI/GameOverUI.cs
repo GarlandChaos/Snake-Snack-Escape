@@ -40,5 +40,6 @@ public class GameOverUI : MonoBehaviour
     {
         UIScreenManager.Instance.HideScreen(gameOverCanvas);
         UIScreenManager.Instance.ShowScreen(menuCanvas);
+        AudioManager.Instance.PlayMenuMusic();
     }
 }

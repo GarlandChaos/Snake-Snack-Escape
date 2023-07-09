@@ -40,6 +40,7 @@ public class VictoryUI : MonoBehaviour
     {
         UIScreenManager.Instance.HideScreen(VictoryCanvas);
         UIScreenManager.Instance.ShowScreen(menuCanvas);
+        AudioManager.Instance.PlayMenuMusic();
     }
 
 }

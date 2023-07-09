@@ -34,6 +34,7 @@ public class EndGameUI : MonoBehaviour
     {
         UIScreenManager.Instance.HideScreen(endGameCanvas);
         UIScreenManager.Instance.ShowScreen(menuCanvas);
+        AudioManager.Instance.PlayMenuMusic();
     }
 
     private void ShowCredits()
