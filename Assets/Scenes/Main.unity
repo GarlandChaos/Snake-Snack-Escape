@@ -123,9 +123,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &237980773 stripped
+--- !u!114 &208144727 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 237980773, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4370211568395002088, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
   m_PrefabInstance: {fileID: 1759931409}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 327386621, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
       propertyPath: levelCountText
       value: 
-      objectReference: {fileID: 237980773}
+      objectReference: {fileID: 0}
     - target: {fileID: 7101503526621499054, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
       propertyPath: menuCanvas
       value: 
@@ -336,6 +336,14 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1759931419}
+    - target: {fileID: 8506427216370557217, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
+      propertyPath: keyCountText
+      value: 
+      objectReference: {fileID: 291622281}
+    - target: {fileID: 8506427216370557217, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
+      propertyPath: levelCountText
+      value: 
+      objectReference: {fileID: 208144727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
 --- !u!1001 &511014560
@@ -815,6 +823,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1505329254}
     - target: {fileID: 481713164365865852, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
+      propertyPath: pathfiding
+      value: 
+      objectReference: {fileID: 720474376}
+    - target: {fileID: 4720592889987423139, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1505329254}
+    - target: {fileID: 4720592889987423139, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
       propertyPath: pathfiding
       value: 
       objectReference: {fileID: 720474376}
