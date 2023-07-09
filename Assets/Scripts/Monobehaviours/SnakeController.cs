@@ -15,6 +15,8 @@ public class SnakeController : MonoBehaviour
     private int snakeSize = 0;
     [SerializeField]
     private float snakeSpeed = 1f;
+    [SerializeField]
+    private PathfindingAgent snakeHeadAgent;
 
     private Vector2Int _lastHeadPos;
 
@@ -37,6 +39,8 @@ public class SnakeController : MonoBehaviour
 
     private void Awake()
     {
+        snakeHeadAgent.moveSpeed = snakeSpeed;
+
         _targetSetter = head.GetComponent<TargetSetter>();
 
         _bodyParts = new List<BodySection>
@@ -68,13 +72,16 @@ public class SnakeController : MonoBehaviour
 
             for(var i = 1; i < _snakePos.Count; i++)
             {
+                if (_bodyParts.Count <= i) continue;
                 StartCoroutine(MoveBody(_bodyParts[i], _snakePos[i]));
             }
         }
 
+        UpdateDirections();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AddBodyPart();
+            //AddBodyPart();
         }
     }
 
@@ -87,6 +94,16 @@ public class SnakeController : MonoBehaviour
         }
 
         _targetSetter.blockedCells = _snakePos;
+    }
+
+    private void UpdateDirections()
+    {
+        for (var i = 1; i < _bodyParts.Count; i++)
+        {
+            _bodyParts[i].transform.forward = _bodyParts[i - 1].transform.position - _bodyParts[i].transform.position;
+            _bodyParts[i].transform.GetChild(1).transform.position = Vector3.Lerp(_bodyParts[i - 1].transform.position, _bodyParts[i].transform.position, 0.5f);
+            _bodyParts[i].transform.GetChild(1).transform.eulerAngles = new Vector3(0, Mathf.LerpAngle(_bodyParts[i - 1].transform.eulerAngles.y, _bodyParts[i].transform.eulerAngles.y, 0.5f), 0);
+        }
     }
 
     private IEnumerator MoveBody(BodySection body, Vector2Int target)

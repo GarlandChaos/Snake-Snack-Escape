@@ -14,11 +14,22 @@ public class PathfindingAgent : MonoBehaviour
     public float moveSpeed;
     public bool Moving => path.Count > 0;
 
+    [SerializeField]
+    private Transform rotateTransform;
+    [SerializeField]
+    private Transform aim;
+
     private IEnumerator Move(Vector2 target, List<Vector2Int> blockedCells)
     {
         while (path.Count > 0)
         {
             var currentTarget = PathfindingManager.Instance.ConvertPosToFloat(path[0]);
+
+            var initialEuler = rotateTransform.eulerAngles.y;
+            aim.position = transform.position;
+            aim.forward = currentTarget - aim.position;
+
+            var t = 0f;
 
             while (Vector3.Distance(currentTarget, transform.position) > distanceTreshold)
             {
@@ -28,7 +39,13 @@ public class PathfindingAgent : MonoBehaviour
                     yield break;
                 }
 
+                if (t < 1f)
+                {
+                    t += (moveSpeed * 2) * Time.deltaTime;
+                    rotateTransform.eulerAngles = new Vector3(0, Mathf.LerpAngle(initialEuler, aim.eulerAngles.y, t), 0);
+                }
                 transform.position = Vector3.MoveTowards(transform.position, currentTarget, moveSpeed * Time.deltaTime);
+
                 yield return null;
             }
 
