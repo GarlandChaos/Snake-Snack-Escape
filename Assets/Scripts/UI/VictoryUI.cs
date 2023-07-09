@@ -33,7 +33,7 @@ public class VictoryUI : MonoBehaviour
     private void Continue()
     {
         UIScreenManager.Instance.HideScreen(VictoryCanvas);
-        StageController.Instance.NextStage();
+        //Proceed to next stage
     }
 
     private void Quit()

@@ -60,7 +60,10 @@ public class MenuUI : MonoBehaviour
     {
         UIScreenManager.Instance.HideScreen(menuCanvas);
         UIScreenManager.Instance.ShowScreen(inGameCanvas);
+        GameState.gameRunning = true;
+        GameState.snakeActive = true;
+        GameState.ratActive = true;
+        GameState.playerActive = true;
         AudioManager.Instance.PlayStageMusic();
-        StageController.Instance.StartGame();
     }
 }

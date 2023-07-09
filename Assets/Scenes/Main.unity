@@ -305,22 +305,6 @@ PrefabInstance:
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 291622286}
-    - target: {fileID: 7101503528611647890, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 1759931418}
-    - target: {fileID: 7101503528611647890, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
-      propertyPath: endGameCanvas
-      value: 
-      objectReference: {fileID: 291622284}
-    - target: {fileID: 7101503528611647890, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
-      propertyPath: victoryCanvas
-      value: 
-      objectReference: {fileID: 291622287}
-    - target: {fileID: 7101503528611647890, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
-      propertyPath: gameOverCanvas
-      value: 
-      objectReference: {fileID: 1759931419}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
 --- !u!1001 &511014560
