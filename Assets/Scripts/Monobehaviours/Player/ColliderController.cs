@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class ColliderController : MonoBehaviour
 {
-    [SerializeField] private IDamageable damageable = null;
+    private IDamageable damageable = null;
+
+    private void Awake()
+    {
+        damageable = GetComponent<IDamageable>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

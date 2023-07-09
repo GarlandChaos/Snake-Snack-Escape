@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class RatsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #region Singleton
+    public static RatsManager Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    #endregion
+
+    public PathfindingManager pathfiding;
+    public RatController rat;
+    private List<RatController> _rats;
+
+    public void SpawnRat()
+    {
+        var newRat = Instantiate(rat, transform);
+        _rats.Add(newRat);
+
+        newRat.transform.position = pathfiding.ConvertPosToFloat(new Vector2Int(Random.Range(0, pathfiding.mapSize.x), Random.Range(0, pathfiding.mapSize.x)));
     }
 }

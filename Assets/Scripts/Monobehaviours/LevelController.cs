@@ -4,8 +4,27 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    #region Singleton
+    public static LevelController Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    #endregion
+
     [SerializeField] private Transform levelGround;
     [SerializeField] private Material levelMat;
+    [SerializeField] private Material wallMat;
+    [SerializeField] private Material wallDetailMat;
+    [SerializeField] private Material wallDetailTopMat;
 
     [SerializeField] private Transform wallLeft;
     [SerializeField] private Transform wallRight;
@@ -17,6 +36,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private PathfindingManager pathfindingManager;
 
     [SerializeField] private SnakeController snakeController;
+
+    [SerializeField] private Camera cam;
 
     public Vector2Int size;
 
@@ -50,5 +71,12 @@ public class LevelController : MonoBehaviour
     public void SetMap(StageData stage)
     {
         SetLevelSize(stage.levelSize);
+        snakeController.ResetSnake(stage.snakeSize, stage.snakeSpeed, stage.snakePosition);
+
+        levelMat.color = stage.groundColor;
+        cam.backgroundColor = stage.backgroundColor;
+        wallMat.color = stage.wallColor;
+        wallDetailMat.color = stage.wallDetailColor;
+        wallDetailTopMat.color = stage.wallDetailTopColor;
     }
 }

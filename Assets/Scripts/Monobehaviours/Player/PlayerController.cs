@@ -14,6 +14,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     public void TakeDamage()
     {
         //Invoke event to show game over UI, show damage particles, etc
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
