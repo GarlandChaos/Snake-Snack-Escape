@@ -29,7 +29,7 @@ public class RatsManager : MonoBehaviour
     {
         var tr = player;
 
-        var distance = 1000f;
+        var distance = Vector3.Distance(snakeHead.position, player.position);
 
         foreach(var rat in _rats)
         {
