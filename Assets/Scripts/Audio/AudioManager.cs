@@ -5,6 +5,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip menuMusic;
+    [SerializeField] private AudioClip stageMusic;
+
     private bool isMuted = false;
 
     #region Singleton
@@ -35,6 +38,18 @@ public class AudioManager : MonoBehaviour
             audioSource.Pause();
             isMuted = true;
         }
+    }
+
+    public void PlayMenuMusic()
+    {
+        audioSource.clip = menuMusic;
+        audioSource.Play();
+    }
+
+    public void PlayStageMusic()
+    {
+        audioSource.clip = stageMusic;
+        audioSource.Play();
     }
 
 }

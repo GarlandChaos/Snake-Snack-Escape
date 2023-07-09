@@ -8,15 +8,16 @@ public class EndGameUI : MonoBehaviour
     [Header("Canvas")]
     [SerializeField] private GameObject endGameCanvas;
     [SerializeField] private GameObject menuCanvas;
+    [SerializeField] private GameObject creditsCanvas;
 
     [Header("Buttons")]
     [SerializeField] private Button returnToMenuButton;
-    [SerializeField] private Button quitButton;
+    [SerializeField] private Button creditsButton;
 
     private void Awake()
     {
         returnToMenuButton.onClick.AddListener(OnReturnToMenuButtonClicked);
-        quitButton.onClick.AddListener(OnQuitButtonClicked);
+        creditsButton.onClick.AddListener(OnCreditsButtonClicked);
     }
 
     private void OnReturnToMenuButtonClicked()
@@ -24,9 +25,9 @@ public class EndGameUI : MonoBehaviour
         ReturnToMenu();
     }
 
-    private void OnQuitButtonClicked()
+    private void OnCreditsButtonClicked()
     {
-        Quit();
+        ShowCredits();
     }
 
     private void ReturnToMenu()
@@ -35,8 +36,8 @@ public class EndGameUI : MonoBehaviour
         UIScreenManager.Instance.ShowScreen(menuCanvas);
     }
 
-    private void Quit()
+    private void ShowCredits()
     {
-        Application.Quit();
+        UIScreenManager.Instance.ShowScreen(creditsCanvas);
     }
 }

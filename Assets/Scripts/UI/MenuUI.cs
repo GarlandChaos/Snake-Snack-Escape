@@ -9,12 +9,13 @@ public class MenuUI : MonoBehaviour
     [Header("Canvas")]
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject menuCanvas;
+    [SerializeField] private GameObject inGameCanvas;
 
     [Header("Buttons")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button openCreditsButton;
     [SerializeField] private Button closeCreditsButton;
-    [SerializeField] private Button soundButton;
+    [SerializeField] private Button soundButton;   
 
     private void Awake()
     {
@@ -42,20 +43,27 @@ public class MenuUI : MonoBehaviour
     private void OnPlayButtonClicked()
     {
         StartGame();
+        
     }
 
     private void ShowCredits()
     {
-        creditsCanvas.SetActive(true);
+        UIScreenManager.Instance.ShowScreen(creditsCanvas);
     }
 
     private void HideCredits()
     {
-        creditsCanvas.SetActive(false);
+        UIScreenManager.Instance.HideScreen(creditsCanvas);
     }
 
     private void StartGame()
     {
         UIScreenManager.Instance.HideScreen(menuCanvas);
+        UIScreenManager.Instance.ShowScreen(inGameCanvas);
+        GameState.gameRunning = true;
+        GameState.snakeActive = true;
+        GameState.ratActive = true;
+        GameState.playerActive = true;
+        AudioManager.Instance.PlayStageMusic();
     }
 }

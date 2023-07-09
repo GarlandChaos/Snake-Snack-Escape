@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614976859811445909}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1309.7781, y: 521.67834, z: -7.516659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -102,6 +102,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5614976859811445908}
     m_Modifications:
+    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
+      propertyPath: menuMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b3223c950781854b88d75b8d6d316fb, type: 3}
+    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
+      propertyPath: stageMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a1bd57d17c46c44da852017e39a4152, type: 3}
     - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
       propertyPath: audioSource
       value: 

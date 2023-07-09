@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1853883049023513793
 Transform:
@@ -90,7 +90,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853883049372160135}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1261.005, y: 686.7243, z: -22.39133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2674096441347505445, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
       propertyPath: m_Name
-      value: In Game UI
+      value: In Game Screen UI
       objectReference: {fileID: 0}
     - target: {fileID: 2674096441347505445, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
       propertyPath: m_IsActive
@@ -311,11 +311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_Name
-      value: Menu UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Menu Screen UI
       objectReference: {fileID: 0}
     - target: {fileID: 6128451625880900836, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_RootOrder
@@ -421,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566974166391205782, guid: 690437e4e0327b74e81d8357cfc6eca1, type: 3}
       propertyPath: m_Name
-      value: Game Over UI
+      value: Game Over Screen UI
       objectReference: {fileID: 0}
     - target: {fileID: 7566974166391205782, guid: 690437e4e0327b74e81d8357cfc6eca1, type: 3}
       propertyPath: m_IsActive
