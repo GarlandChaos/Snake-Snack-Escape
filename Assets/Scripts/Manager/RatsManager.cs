@@ -46,9 +46,11 @@ public class RatsManager : MonoBehaviour
 
     public bool ShouldDropKey()
     {
+        if (StageController.Instance.KeysLeft <= KeyManager.Instance.keys.Count) return false;
+
         if (_rats.Count <= StageController.Instance.KeysLeft) return true;
 
-        return Random.Range(0, 100) > 90;
+        return Random.Range(0, 100) > 50;
     }
 
     public void SpawnRats(int amount)

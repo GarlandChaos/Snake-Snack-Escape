@@ -17,7 +17,7 @@ MonoBehaviour:
   levelSize: {x: 10, y: 10}
   snakePosition: {x: 0, y: 0}
   snakeSize: 4
-  snakeSpeed: 1
+  snakeSpeed: 3
   rats: 5
   groundColor: {r: 0.49043253, g: 0.9716981, b: 0.56027734, a: 0}
   backgroundColor: {r: 0.4481132, g: 0.90736526, b: 1, a: 0}

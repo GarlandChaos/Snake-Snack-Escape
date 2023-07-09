@@ -6,6 +6,6 @@ public class KeyController : MonoBehaviour, IInteractable
     {
         Debug.Log("Collected key");
         StageController.Instance.CollectKey();
-        KeyManager.Instance.DestroyKey();
+        KeyManager.Instance.DestroyKey(gameObject);
     }
 }

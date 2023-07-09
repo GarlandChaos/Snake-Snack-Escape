@@ -795,6 +795,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 594852754}
+    - target: {fileID: 310615982202807157, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 2997896271400628540, guid: 5a36f37ee9f147d4592211f674835532, type: 3}
     - target: {fileID: 481713164365865852, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
       propertyPath: rat
       value: 
