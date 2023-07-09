@@ -51,11 +51,17 @@ public class StageController : MonoBehaviour
         if (currentStageIndex < stagesData.Length - 1)
         {
             currentStageIndex++;
-            // Load Next Level
+            LevelController.Instance.SetMap(stagesData[currentStageIndex]);
         }
         else
         {
             // End Game Screen
         }
+    }
+
+    public void StartGame()
+    {
+        currentStageIndex = -1;
+        NextStage();
     }
 }
