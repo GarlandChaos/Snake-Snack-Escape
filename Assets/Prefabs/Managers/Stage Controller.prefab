@@ -46,3 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stagesData:
   - {fileID: 11400000, guid: 98adb6369c1878b4fb406607ab0ec983, type: 2}
+  - {fileID: 11400000, guid: a5d6d622b170f124481b32bb272ead61, type: 2}
+  - {fileID: 11400000, guid: d6478c51c87a2b44f93c1b755ebe5197, type: 2}
+  - {fileID: 11400000, guid: 87f192737f53fa742826e847007d4586, type: 2}
+  - {fileID: 11400000, guid: 9051380688d286d43b828159535844e0, type: 2}
+  - {fileID: 11400000, guid: 0ac65abbada852144bfa4a6347ae7336, type: 2}
+  - {fileID: 11400000, guid: 1d15715686e112a44bfb154e68207093, type: 2}
+  - {fileID: 11400000, guid: cf0c035539b42cd46a4137143ea2c5c3, type: 2}
+  - {fileID: 11400000, guid: a554c6ce433b65f469adbc52401c9e5b, type: 2}
+  - {fileID: 11400000, guid: 8d4184fe8314cbd4fb171574eafe1fc4, type: 2}
