@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 0
   keysRequired: 3
-  levelSize: {x: 10, y: 10}
+  levelSize: {x: 18, y: 15}
   snakePosition: {x: 0, y: 0}
   snakeSize: 4
-  snakeSpeed: 3
+  snakeSpeed: 2.2
   rats: 5
-  groundColor: {r: 0.49043253, g: 0.9716981, b: 0.56027734, a: 0}
-  backgroundColor: {r: 0.4481132, g: 0.90736526, b: 1, a: 0}
-  wallColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
-  wallDetailColor: {r: 1, g: 0.7620259, b: 0.5235849, a: 0}
-  wallDetailTopColor: {r: 0.5943396, g: 0.3262709, b: 0.103729084, a: 0}
+  groundColor: {r: 0.5137255, g: 0.7438347, b: 1, a: 0}
+  backgroundColor: {r: 0.8773585, g: 0.87043524, b: 0.46764863, a: 0}
+  wallColor: {r: 0.8509804, g: 0.5411765, b: 0.5759914, a: 0}
+  wallDetailColor: {r: 0.7843138, g: 0.8235295, b: 1, a: 0}
+  wallDetailTopColor: {r: 0.7843138, g: 0.8235295, b: 1, a: 0}
