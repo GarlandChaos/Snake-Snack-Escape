@@ -10,6 +10,8 @@ public class StageController : MonoBehaviour
     public int keysCount { get; private set; } = 0;
     public Action allKeysCollected = null;
 
+    public int KeysLeft => stagesData[currentStageIndex].keysRequired - keysCount;
+
     #region Singleton
     public static StageController Instance { get; private set; }
 
@@ -31,7 +33,7 @@ public class StageController : MonoBehaviour
         keysCount = 0;
     }
 
-    private void CollectKey()
+    public void CollectKey()
     {
         keysCount++;
         if(keysCount < stagesData[currentStageIndex].keysRequired)
@@ -51,17 +53,49 @@ public class StageController : MonoBehaviour
         if (currentStageIndex < stagesData.Length - 1)
         {
             currentStageIndex++;
-            LevelController.Instance.SetMap(stagesData[currentStageIndex]);
+            SetStage();
         }
         else
         {
-            // End Game Screen
+            DisableGameStates();
+            UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.endGameCanvas);
         }
+    }
+
+    public void SetVictory()
+    {
+        DisableGameStates();
+        UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.victoryCanvas);
+
     }
 
     public void StartGame()
     {
-        currentStageIndex = -1;
-        NextStage();
+        currentStageIndex = 0;
+        SetStage();
+    }
+
+    public void SetStage()
+    {
+        ResetKeyCount();
+        InGameUI.Instance.SetKeyCount(new MinMax { min = keysCount, max = stagesData[currentStageIndex].keysRequired });
+        LevelController.Instance.SetMap(stagesData[currentStageIndex]);
+        EnableGameStates();
+    }
+
+    private void EnableGameStates()
+    {
+        GameState.gameRunning = true;
+        GameState.snakeActive = true;
+        GameState.ratActive = true;
+        GameState.playerActive = true;
+    }
+
+    private void DisableGameStates()
+    {
+        GameState.gameRunning = false;
+        GameState.snakeActive = false;
+        GameState.ratActive = false;
+        GameState.playerActive = false;
     }
 }

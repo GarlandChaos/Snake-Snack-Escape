@@ -7,6 +7,10 @@ public class UIScreenManager : MonoBehaviour
 {
     #region Singleton
     public static UIScreenManager Instance { get; private set; }
+    public GameObject menuCanvas;
+    public GameObject gameOverCanvas;
+    public GameObject victoryCanvas;
+    public GameObject endGameCanvas;
 
     private void Awake()
     {
