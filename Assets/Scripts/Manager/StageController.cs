@@ -66,7 +66,12 @@ public class StageController : MonoBehaviour
     {
         DisableGameStates();
         UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.victoryCanvas);
+    }
 
+    public void SetGameOver()
+    {
+        DisableGameStates();
+        UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.gameOverCanvas);
     }
 
     public void StartGame()
