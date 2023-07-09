@@ -20,7 +20,7 @@ public class SnakeController : MonoBehaviour
 
     private Vector2Int _lastHeadPos;
 
-    private List<Vector2Int> _snakePos = new();
+    public List<Vector2Int> snakePositions = new();
 
     private TargetSetter _targetSetter;
 
@@ -37,7 +37,7 @@ public class SnakeController : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private void Start()
     {
         snakeHeadAgent.moveSpeed = snakeSpeed;
 
@@ -48,6 +48,8 @@ public class SnakeController : MonoBehaviour
             new(head.transform, GetGridPos(head.transform)),
             new(tail.transform, GetGridPos(tail.transform)),
         };
+
+        snakePositions = new List<Vector2Int>();
 
         UpdateSnakePositions();
 
@@ -70,10 +72,10 @@ public class SnakeController : MonoBehaviour
 
             StopAllCoroutines();
 
-            for(var i = 1; i < _snakePos.Count; i++)
+            for(var i = 1; i < snakePositions.Count; i++)
             {
                 if (_bodyParts.Count <= i) continue;
-                StartCoroutine(MoveBody(_bodyParts[i], _snakePos[i]));
+                StartCoroutine(MoveBody(_bodyParts[i], snakePositions[i]));
             }
         }
 
@@ -82,18 +84,19 @@ public class SnakeController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //AddBodyPart();
+            ResetSnake(Random.Range(3, 10), Random.Range(1f, 3f), Vector2Int.zero);
         }
     }
 
     private void UpdateSnakePositions()
     {
-        _snakePos.Insert(0, GetGridPos(head.transform));
-        if(_snakePos.Count > snakeSize + 2)
+        snakePositions.Insert(0, GetGridPos(head.transform));
+        if(snakePositions.Count > snakeSize + 2)
         {
-            _snakePos.RemoveAt(_snakePos.Count-1);
+            snakePositions.RemoveAt(snakePositions.Count-1);
         }
 
-        _targetSetter.blockedCells = _snakePos;
+        _targetSetter.blockedCells = snakePositions;
     }
 
     private void UpdateDirections()
@@ -110,9 +113,9 @@ public class SnakeController : MonoBehaviour
     {
         var t = 0f;
         var originalPos = body.transform.position;
-        var targetPos = new Vector3(target.x, 0, target.y);
+        var targetPos = PathfindingManager.Instance.ConvertPosToFloat(target);
 
-        while(t < 1f)
+        while (t < 1f)
         {
             t += snakeSpeed * Time.deltaTime;
             body.transform.position = Vector3.Lerp(originalPos, targetPos, t);
@@ -132,6 +135,27 @@ public class SnakeController : MonoBehaviour
 
     private Vector2Int GetGridPos(Transform tr)
     {
-        return new Vector2Int(Mathf.FloorToInt(tr.transform.position.x + 0.5f), Mathf.FloorToInt(tr.transform.position.z + 0.5f));
+        return PathfindingManager.Instance.ConvertPosToInt(new Vector2(tr.position.x, tr.position.z));
+    }
+
+    public void ResetSnake(int snakeSize, float speed, Vector2Int pos)
+    {
+        StopAllCoroutines();
+
+        for(var i = 1; i < _bodyParts.Count - 1; i++)
+        {
+            Destroy(_bodyParts[i].transform.gameObject);
+        }
+        _bodyParts = new List<BodySection>();
+
+        snakeSpeed = speed;
+        this.snakeSize = snakeSize;
+
+        var position = PathfindingManager.Instance.ConvertPosToFloat(pos);
+
+        head.transform.position = position;
+        tail.transform.position = position;
+
+        Start();
     }
 }

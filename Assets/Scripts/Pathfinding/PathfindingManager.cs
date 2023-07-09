@@ -30,6 +30,7 @@ public class PathfindingManager : MonoBehaviour
     public void UpdateCollisionMap()
     {
         mask = LayerMask.GetMask(collisionLayers);
+        collisionMap = new bool[mapSize.x, mapSize.y];
         for (int x = 0; x < mapSize.x; x++)
         {
             for (int y = 0; y < mapSize.y; y++)
@@ -53,13 +54,13 @@ public class PathfindingManager : MonoBehaviour
     public Vector2Int ConvertPosToInt(Vector2 pos)
     {
         var halfCell = cellSize / 2f;
-        pos -= (Vector2)offSet;
+        pos += new Vector2(offSet.x, offSet.z);
         return new Vector2Int(Mathf.FloorToInt((pos.x + halfCell) / cellSize), Mathf.FloorToInt((pos.y + halfCell) / cellSize));
     }
 
     public Vector3 ConvertPosToFloat(Vector2Int pos)
     {
-        return new Vector3((pos.x) * cellSize, 0, (pos.y) * cellSize) + offSet;
+        return new Vector3((pos.x) * cellSize, 0, (pos.y) * cellSize) - offSet;
     }
     public List<Vector2Int> GetPath(Vector2Int origin, Vector2Int target, List<Vector2Int> blockedPositions)
     {
@@ -77,6 +78,7 @@ public class PathfindingManager : MonoBehaviour
                 {
                     var newCell = new Vector2Int(x + currentCell.x, y + currentCell.y);
                     if (x == 0 && y == 0 || x != 0 && y != 0) continue;
+                    
                     if (cellsToCheck.Contains(newCell) || checkedCells.ContainsKey(newCell) || blockedPositions.Contains(newCell)) continue;
 
                     if (BlockedCell(newCell) && newCell != origin && newCell != target)
