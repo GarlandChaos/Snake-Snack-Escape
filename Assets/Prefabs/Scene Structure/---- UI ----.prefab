@@ -230,6 +230,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2674096441828236031, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674096441828236031, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674096441828236031, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674096441828236031, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
+      propertyPath: m_Color.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
 --- !u!4 &1853883050647392681 stripped
@@ -379,10 +395,6 @@ PrefabInstance:
     - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_Name
       value: Menu Screen UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6128451625880900836, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_RootOrder

@@ -11,7 +11,7 @@ public class TargetSetter : MonoBehaviour
 
     public List<Vector2Int> blockedCells = new List<Vector2Int>();
 
-    private void Awake()
+    private void Start()
     {
         _agent = GetComponent<PathfindingAgent>();
         _target = RatsManager.Instance.GetClosestRat(transform);

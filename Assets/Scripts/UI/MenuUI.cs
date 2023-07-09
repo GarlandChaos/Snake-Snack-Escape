@@ -15,7 +15,8 @@ public class MenuUI : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button openCreditsButton;
     [SerializeField] private Button closeCreditsButton;
-    [SerializeField] private Button soundButton;   
+    [SerializeField] private Button soundButton;
+    [SerializeField] private Button exitButton;
 
     private void Awake()
     {
@@ -23,6 +24,19 @@ public class MenuUI : MonoBehaviour
         openCreditsButton.onClick.AddListener(OnOpenCreditsButtonClicked);
         closeCreditsButton.onClick.AddListener(OnCloseCreditsButtonClicked);
         soundButton.onClick.AddListener(OnSoundButtonClicked);
+        exitButton.onClick.AddListener(OnExitButtonClicked);
+    }
+
+    private void Start()
+    {
+#if PLATFORM_STANDALONE_WIN || UNITY_STANDALONE_WIN
+        exitButton.gameObject.SetActive(true);
+#endif
+    }
+
+    private void OnExitButtonClicked()
+    {
+        Application.Quit();
     }
 
     private void OnSoundButtonClicked()
