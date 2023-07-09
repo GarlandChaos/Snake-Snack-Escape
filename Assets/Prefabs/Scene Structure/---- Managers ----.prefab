@@ -155,26 +155,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe13bcf12a9a3941adb43718820afcf, type: 3}
---- !u!1 &405964263773493837 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4796280774129066642, guid: fbe13bcf12a9a3941adb43718820afcf, type: 3}
-  m_PrefabInstance: {fileID: 5128906918668499167}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &481713164365865852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405964263773493837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f2eb21a037fb540ae09324cc46766d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathfiding: {fileID: 0}
-  rat: {fileID: 2158844836039703905, guid: 097c6e2ed116b584d88c22773902b030, type: 3}
-  player: {fileID: 0}
 --- !u!4 &1261250166627093824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6245742760531506591, guid: fbe13bcf12a9a3941adb43718820afcf, type: 3}
@@ -187,38 +167,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5614976859811445908}
     m_Modifications:
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: keySFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 8fbd53f2411ce3541a76eef32322574a, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: defeatSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 49b264ee4d0528a429858c6aca5c56a2, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: menuMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b3223c950781854b88d75b8d6d316fb, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: stageMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 6a1bd57d17c46c44da852017e39a4152, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: victorySFX
-      value: 
-      objectReference: {fileID: 8300000, guid: bfa148326a1fb664eaddcdd54f594e78, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: walkingSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 6954023546be83b499412a15713dd3b9, type: 3}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 98289388810881218, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
-      propertyPath: doorOpenSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 9ae69d043422edb4d830ef2d920c6a82, type: 3}
     - target: {fileID: 98289388810881228, guid: 94db8333fe9402548b9eebc4316dc46f, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -358,6 +306,10 @@ PrefabInstance:
     - target: {fileID: 8597658483606514611, guid: 130d4cbd4aed4a94a8b4d7b577f1b067, type: 3}
       propertyPath: m_LocalPosition.z
       value: 7.516659
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597658483606514611, guid: 130d4cbd4aed4a94a8b4d7b577f1b067, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8597658483606514611, guid: 130d4cbd4aed4a94a8b4d7b577f1b067, type: 3}
       propertyPath: m_LocalRotation.x

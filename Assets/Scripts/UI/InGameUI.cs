@@ -7,6 +7,7 @@ using UnityEngine;
 public class InGameUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text keyCountText;
+    [SerializeField] private TMP_Text levelCountText;
     private StageController stageControllerInstance;
 
     #region Singleton
@@ -41,8 +42,12 @@ public class InGameUI : MonoBehaviour
         keyCountText.SetText($"{keyCount.min} / {keyCount.max}");
     }
 
+    public void SetLevelCount(int currentStage)
+    {
+        levelCountText.SetText($"LV {currentStage + 1}");
+    }
     public void SetDoorOpenText()
     {
-        keyCountText.SetText("Escape");
+        keyCountText.SetText("ESCAPE!");
     }
 }

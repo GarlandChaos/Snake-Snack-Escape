@@ -87,6 +87,7 @@ public class StageController : MonoBehaviour
     {
         ResetKeyCount();
         InGameUI.Instance.SetKeyCount(new MinMax { min = keysCount, max = stagesData[currentStageIndex].keysRequired });
+        InGameUI.Instance.SetLevelCount(currentStageIndex);
         LevelController.Instance.SetMap(stagesData[currentStageIndex]);
         EnableGameStates();
     }

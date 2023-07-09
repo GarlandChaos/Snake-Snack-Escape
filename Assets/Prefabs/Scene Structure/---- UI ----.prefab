@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Victory Screen UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4040342260459801019, guid: 7a1247e70f582ab438ef3a31ca876536, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1247e70f582ab438ef3a31ca876536, type: 3}
 --- !u!4 &1853883050473681097 stripped
@@ -222,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: In Game Screen UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2674096441347505445, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8e13849ebacac4d9f84a7e51d3df00, type: 3}
 --- !u!4 &1853883050647392681 stripped
@@ -239,6 +247,10 @@ PrefabInstance:
     - target: {fileID: 1458734460488656794, guid: 934706297c8d2094a92740944613f54b, type: 3}
       propertyPath: m_Name
       value: Credits Screen UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458734460488656794, guid: 934706297c8d2094a92740944613f54b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3168155592321883139, guid: 934706297c8d2094a92740944613f54b, type: 3}
       propertyPath: m_RootOrder
@@ -346,6 +358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Game Screen UI
       objectReference: {fileID: 0}
+    - target: {fileID: 6001161338813725279, guid: 4a14a40ebf18161489cf5f66c4082ab8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a14a40ebf18161489cf5f66c4082ab8, type: 3}
 --- !u!4 &1853883049311800778 stripped
@@ -363,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_Name
       value: Menu Screen UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128451625880900835, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6128451625880900836, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_RootOrder
@@ -407,10 +427,6 @@ PrefabInstance:
     - target: {fileID: 6128451625880900836, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6128451626896517294, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
-      propertyPath: m_Color.a
-      value: 0.74509805
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6fe540f32bd5e419e382c5514b4cf4, type: 3}
@@ -473,6 +489,10 @@ PrefabInstance:
     - target: {fileID: 7566974166391205782, guid: 690437e4e0327b74e81d8357cfc6eca1, type: 3}
       propertyPath: m_Name
       value: Game Over Screen UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566974166391205782, guid: 690437e4e0327b74e81d8357cfc6eca1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 690437e4e0327b74e81d8357cfc6eca1, type: 3}

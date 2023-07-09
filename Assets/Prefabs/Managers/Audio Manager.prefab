@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98289388810881228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,3 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  sfxAudioSource: {fileID: 0}
+  walkingAudioSource: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: 8b3223c950781854b88d75b8d6d316fb, type: 3}
+  stageMusic: {fileID: 8300000, guid: 6a1bd57d17c46c44da852017e39a4152, type: 3}
+  defeatSFX: {fileID: 8300000, guid: 49b264ee4d0528a429858c6aca5c56a2, type: 3}
+  victorySFX: {fileID: 8300000, guid: bfa148326a1fb664eaddcdd54f594e78, type: 3}
+  doorOpenSFX: {fileID: 8300000, guid: 9ae69d043422edb4d830ef2d920c6a82, type: 3}
+  keySFX: {fileID: 8300000, guid: 8fbd53f2411ce3541a76eef32322574a, type: 3}
+  walkingSFX: {fileID: 8300000, guid: 6954023546be83b499412a15713dd3b9, type: 3}

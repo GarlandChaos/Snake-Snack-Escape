@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8944509355176270335}
   - component: {fileID: 8944509355176270332}
-  - component: {fileID: 8944509355176270333}
   m_Layer: 0
   m_Name: UI Screen Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8944509355176270335
 Transform:
@@ -45,16 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76d589ce0b55bb42b3705ab7d7a2219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8944509355176270333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8944509355176270334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24bb2555da95054d91a8f3ce25a39fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyCountText: {fileID: 0}
+  menuCanvas: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+  victoryCanvas: {fileID: 0}
+  endGameCanvas: {fileID: 0}

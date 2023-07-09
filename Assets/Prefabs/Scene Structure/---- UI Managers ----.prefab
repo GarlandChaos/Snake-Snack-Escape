@@ -44,17 +44,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7101503526708251175}
     m_Modifications:
-    - target: {fileID: 8944509355176270333, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
-      propertyPath: keyCountText
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8944509355176270334, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
       propertyPath: m_Name
       value: UI Screen Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8944509355176270334, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8944509355176270335, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
       propertyPath: m_RootOrder
@@ -100,8 +92,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8944509355176270333, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 939b738ddcc81414d9a80b725d5b30df, type: 3}
 --- !u!4 &7101503528611647889 stripped
 Transform:
@@ -163,26 +154,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Victory UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4784307506277978283, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784307506277978285, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784307506277978285, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
-      propertyPath: quitButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784307506277978285, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
-      propertyPath: VictoryCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784307506277978285, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 788de212dd92e214da2f6bec9c62c65a, type: 3}
 --- !u!4 &7101503527869349839 stripped
@@ -197,22 +168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7101503526708251175}
     m_Modifications:
-    - target: {fileID: 6122231788671210041, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6122231788671210041, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
-      propertyPath: quitButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6122231788671210041, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
-      propertyPath: endGameCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6122231788671210041, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
-      propertyPath: returnToMenuButton
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6122231788671210046, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -260,10 +215,6 @@ PrefabInstance:
     - target: {fileID: 6122231788671210047, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
       propertyPath: m_Name
       value: End Game UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6122231788671210047, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e7774a0fdfd77448d712ba1f91ef8e, type: 3}
@@ -327,34 +278,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu UI
       objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199813, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: playButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: soundButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: creditsCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: openCreditsButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2460864364469199815, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
-      propertyPath: closeCreditsButton
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca0639661e8a02e4d804bd7da98c05e5, type: 3}
 --- !u!4 &7101503526621499053 stripped
@@ -369,22 +292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7101503526708251175}
     m_Modifications:
-    - target: {fileID: 273002586581042256, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 273002586581042256, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
-      propertyPath: giveUpButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 273002586581042256, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
-      propertyPath: gameOverCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 273002586581042256, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
-      propertyPath: tryAgainButton
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 273002586581042257, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -433,10 +340,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Over UI
       objectReference: {fileID: 0}
-    - target: {fileID: 273002586581042262, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7366227db2b99c44fbe1d9bdbb10fb1d, type: 3}
 --- !u!4 &7101503526867541400 stripped
@@ -454,10 +357,6 @@ PrefabInstance:
     - target: {fileID: 1477600342134512146, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}
       propertyPath: m_Name
       value: In Game UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1477600342134512146, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1477600342134512147, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}
       propertyPath: m_RootOrder
@@ -505,24 +404,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}
---- !u!1 &7101503527907016398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1477600342134512146, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}
-  m_PrefabInstance: {fileID: 8506427216060015836}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &327386621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101503527907016398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24bb2555da95054d91a8f3ce25a39fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyCountText: {fileID: 0}
 --- !u!4 &7101503527907016399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1477600342134512147, guid: dc869cb7613f7a14a9b63ed90af9def5, type: 3}

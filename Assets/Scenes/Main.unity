@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &237980773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 237980773, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
+  m_PrefabInstance: {fileID: 1759931409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &291622281 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1853883050878950085, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
@@ -177,6 +188,10 @@ PrefabInstance:
       propertyPath: keyCountText
       value: 
       objectReference: {fileID: 291622281}
+    - target: {fileID: 327386621, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
+      propertyPath: levelCountText
+      value: 
+      objectReference: {fileID: 237980773}
     - target: {fileID: 7101503526621499054, guid: 36d1a983c200dfd4eaf0f35788cccf32, type: 3}
       propertyPath: menuCanvas
       value: 
@@ -795,14 +810,6 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 594852754}
-    - target: {fileID: 310615982202807157, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
-      propertyPath: key
-      value: 
-      objectReference: {fileID: 2997896271400628540, guid: 5a36f37ee9f147d4592211f674835532, type: 3}
-    - target: {fileID: 481713164365865852, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
-      propertyPath: rat
-      value: 
-      objectReference: {fileID: 2158844836039703905, guid: 097c6e2ed116b584d88c22773902b030, type: 3}
     - target: {fileID: 481713164365865852, guid: 8a9903b68de1c10419f5e108da8905de, type: 3}
       propertyPath: player
       value: 
@@ -927,10 +934,6 @@ PrefabInstance:
     - target: {fileID: 1853883049372160135, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
       propertyPath: m_Name
       value: ---- UI ----
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853883049617228842, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec933f5f15247540b4c0a4b7e7d7db9, type: 3}

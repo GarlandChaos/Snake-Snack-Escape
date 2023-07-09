@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6122231788671210046
 Transform:
@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGameCanvas: {fileID: 0}
   menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
   returnToMenuButton: {fileID: 0}
-  quitButton: {fileID: 0}
+  creditsButton: {fileID: 0}
