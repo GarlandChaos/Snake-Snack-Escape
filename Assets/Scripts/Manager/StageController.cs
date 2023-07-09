@@ -43,6 +43,7 @@ public class StageController : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.PlayDoorOpenSFX();
             InGameUI.Instance.SetDoorOpenText();
             allKeysCollected?.Invoke();
         }
@@ -59,6 +60,7 @@ public class StageController : MonoBehaviour
 
     public void SetVictory()
     {
+        AudioManager.Instance.PlayVictorySFX();
         if (currentStageIndex < stagesData.Length - 1)
         {
             DisableGameStates();
@@ -74,6 +76,7 @@ public class StageController : MonoBehaviour
     public void SetGameOver()
     {
         DisableGameStates();
+        AudioManager.Instance.PlayDefeatSFX();
         UIScreenManager.Instance.ShowScreen(UIScreenManager.Instance.gameOverCanvas);
     }
 
@@ -90,6 +93,7 @@ public class StageController : MonoBehaviour
         InGameUI.Instance.SetLevelCount(currentStageIndex);
         LevelController.Instance.SetMap(stagesData[currentStageIndex]);
         EnableGameStates();
+        AudioManager.Instance.PlayStageMusic();
     }
 
     private void EnableGameStates()
@@ -102,6 +106,7 @@ public class StageController : MonoBehaviour
 
     private void DisableGameStates()
     {
+        AudioManager.Instance.StopMusic();
         InputController.Instance.ResetVelocity();
         InputController.Instance.StopMoving();
         AudioManager.Instance.StopWalkingSFX();

@@ -99,6 +99,11 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void StopMusic()
+    {
+        audioSource.Stop();
+    }
+
     public void PlayDefeatSFX()
     {
         sfxAudioSource.PlayOneShot(defeatSFX);
