@@ -39,7 +39,7 @@ public class InGameUI : MonoBehaviour
 
     public void SetKeyCount(MinMax keyCount)
     {
-        keyCountText.SetText($"{keyCount.min} / {keyCount.max}");
+        keyCountText.SetText($"{keyCount.min}/{keyCount.max}");
     }
 
     public void SetLevelCount(int currentStage)
