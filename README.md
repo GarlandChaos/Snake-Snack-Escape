@@ -1,6 +1,6 @@
 # Snake Snack Escape
 
-<img align="right" src="https://img.itch.zone/aW1nLzEyNzQ2OTM0LmdpZg==/315x250%23cm/%2FPUMwE.gif" width= 200/>
+<img align="right" src="https://img.itch.zone/aW1nLzEyNzQ2OTM0LmdpZg==/315x250%23cm/%2FPUMwE.gif" height=160/>
 
 Snake Snack Escape is a 3D arcade game made in Unity for the GMTK 2023 game jam.
 
